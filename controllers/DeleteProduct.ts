@@ -12,7 +12,7 @@ export const DeleteProductController = {
       const productInCart = await CartModel.findById(productId);
     
       /* Buscamos el producto en nuestra DB por el nombre del que esta en el carrito */
-      const { name, precio, _id} = await ProductModel.findOne({
+      const { name, precio, _id } = await ProductModel.findOne({
         name: productInCart?.name,
       });
     
@@ -25,7 +25,7 @@ export const DeleteProductController = {
       /* Y el new para devolver el producto editado */
       await ProductModel.findByIdAndUpdate(
         _id,
-        { inCart: false, name, precio },
+        { EnCart: false, name, precio },
         { new: true }
       )
         .then((product) => {
