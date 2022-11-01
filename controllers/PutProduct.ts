@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
-import { request } from "http";
-import { CartModel} from "../models/cart";
+import CartModel from "../models/cart";
 
 export const PutProductController = {
    

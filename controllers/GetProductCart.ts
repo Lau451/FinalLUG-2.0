@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { CartModel} from "../models/cart";
-import { ProductModel} from "../models/product";
+import CartModel from "../models/cart";
+
 
 export const GetProductCartController = {
 get: async (req:Request, res:Response) => {
