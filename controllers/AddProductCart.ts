@@ -8,13 +8,13 @@ export const AddProductCartController = {
         /*desarmamos el producto*/
         const { name, precio } = req.body;
 
-        /* Nos fijamos si tenemos el producto (MAURO)*/
+        /* Nos fijamos si tenemos el producto*/
         const estaEnProducts = await ProductModel.findOne({name});
       
         /* Nos fijamos si todos los campos vienen con info */
         const noEstaVacio = name !== "" && precio !== "";
       
-        /* Nos fijamos si el producto ya esta en el carrito(MAURO) */
+        /* Nos fijamos si el producto ya esta en el carrito*/
         const estaEnElCarrito = await CartModel.findOne({name});
       
         /* Si no tenemos el producto */

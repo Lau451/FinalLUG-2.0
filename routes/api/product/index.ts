@@ -1,9 +1,12 @@
 import { Router } from "express";
-import { ProductController } from "../../../controllers/product";
+import { GetProductController } from "../../../controllers/GetProduct";
+import { AddProductController } from "../../../controllers/AddProduct";
 
 const router = Router();
 
-router.get("/", ProductController.get);
+router.get("/", GetProductController.get);
+
+router.post("/", AddProductController.post);
 
 export default router;
 

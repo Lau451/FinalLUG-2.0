@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import ProductModel from "../models/product";
 
 
-export const ProductController = {
+export const GetProductController = {
   get: async (req: Request, res: Response) => {
     const products = await ProductModel.find();
 

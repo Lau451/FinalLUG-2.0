@@ -1,6 +1,7 @@
 import { Schema, model} from "mongoose";
+import { Document}  from "mongoose"
 
-interface IProduct{
+interface IProduct  extends Document{
 name: String,
 precio: Number,
 enCart: Boolean
